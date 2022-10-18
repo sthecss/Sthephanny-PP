@@ -1000,21 +1000,3 @@ int main (){
 }
 */
 // ======================================================
-
-
-//==================== Exercicio 41 =====================
-//
-/*
-#include <stdio.h>
-#include <stdlib.h>
-
-int main (){
-
-    printf ("Apresente o valor de uma area em hectares: ");
-
-    printf("\nFim do programa!\n");
-    printf("\n");
-    system("pause");
-    return 0;
-*/
-// ======================================================
