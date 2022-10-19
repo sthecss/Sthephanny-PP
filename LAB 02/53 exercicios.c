@@ -12,10 +12,13 @@
 #include <stdio.h>
 int main (){
 
-    int inteiro=225;
-    printf("O numero a seguir eh exemplo de um numero inteiro: %d \n", inteiro);
+    int inteiro;
+    printf("Digite um numero inteiro para que eu possa repetir:\n");
+    scanf("%d", &inteiro);
 
-    printf("Fim do programa!\n");
+    printf("Seu numero foi:\n%.d.", inteiro);
+
+    printf("\nFim do programa!\n");
     system ("pause");
     return 0;
 }
@@ -29,12 +32,15 @@ int main (){
 #include <stdio.h>
 #include <stdio.h>
 
-void main (){
+int main (){
 
-    float real=141.5342;
-    printf("O numero a seguir eh exemplo de um numero real: %f\n", real);
+    float real;
+    printf("Digite um numero inteiro para que eu possa repetir:\n");
+    scanf("%f", &real);
 
-    printf("Fim do programa!\n");
+    printf("Seu numero foi (ele sera apresentado com 5 casas depois da virgula):\n%.5f.", real);
+
+    printf("\nFim do programa!\n");
     system ("pause");
     return 0;
 }
@@ -982,16 +988,404 @@ int main (){
 int main (){
 
     printf("Para pagar devidamente o funcionário, considere o valor abaixo, e responda algumas perguntas:\n");
-        float horadia = 6;
-    printf("Voce recebe por hora: R$%.2f", horadia);
-        float horames;
+        float hora_dia = 6;
+    printf("Voce recebe por hora: R$%.2f", hora_dia);
+        float hora_mes;
     printf("\nQuantas horas voce trabalhou esse mes? Digite abaixo:\n");
-    scanf("%f", &horames);
-        float hrstrab = horadia * horames;
-        float bonus, salfim;
-    bonus = hrstrab * 0.10;
-    salfim = hrstrab + bonus;
-    printf("Voce recebera esse mes: R$%.2f", salfim);
+    scanf("%f", &hora_mes);
+        float hrs_trab = hora_dia * hora_mes;
+        float bonus, sal_fim;
+    bonus = hrs_trab * 0.10;
+    sal_fim = hrs_trab + bonus;
+    printf("Voce recebera esse mes: R$%.2f", sal_fim);
+
+    printf("\nFim do programa!\n");
+    printf("\n");
+    system("pause");
+    return 0;
+}
+*/
+// ======================================================
+
+
+//==================== Exercicio 42 =====================
+// Receba o salário-base de um funcionário. Calcule e imprima o salário a receber, sabendo-se que esse funcionário tem uma gratificação de 5% sobre o salário-base. Além disso, ele paga 7% de imposto sobre o salário-base.
+/*
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main (){
+
+    float salario_base, bonificacao, salario_IR, salario_final;
+    printf("Para calcular devidamente o salario que deve ser recebido esse mes, digite primeiro o salario base:\n");
+    scanf("%f", &salario_base);
+
+    bonificacao = salario_base * 1.05;
+    salario_IR = salario_base * 0.07;
+    salario_final = bonificacao - salario_IR;
+    printf("Com base nas informacoes dadas o seu salario, considerando a bonificacao de 5 porcento e o desconto do imposto de renda, sera de:\nR$%.f\n", salario_final);
+
+    printf("\nFim do programa!\n");
+    printf("\n");
+    system("pause");
+    return 0;
+} 
+*/
+// ======================================================
+
+
+//==================== Exercicio 43 =====================
+/* Escreva um programa de ajuda para vendedores. A partir de um valor total lido, mostre:
+- o total a pagar com desconto de 10%;
+- o valor de cada parcela, no parcelamento de 3% sem juros;
+// GRANDISSISSIMO ADENDO!!!!!!!!! No enunciado a parcela comenta ser 3 porcento sem juros, mas isso fica realmente confuso. Entao considerarei pacela de TRES VEZES;
+- a comissão do vendedor, no caso da venda ser a vista (5% sobre o valor com desconto);
+- a comissão do vendedor, no caso da venda ser parcelada (5% sobre o valor total).
+*/
+/*
+#include <stdio.h>
+#include <stdlib.h>
+
+int main (){
+
+    float desc_10, parcelamento, comissa_avista, comissao_parcel, produtoV, produto_desc;
+
+    printf("O valor que for entregue ao programa resultara em 4 situacoes: \n\n- A primeira o valor total com um desconto de 10 porcento;\n- O segundo caso sera mostrado o valor das parcelas em 3 vezes sem juros;\n- O terceiro caso a comissao do vendedor em caso de venda avista;\n- E na quarta situacao, o valor da comissao em caso de venda parcelada.\n");
+    printf("Digite o valor do produto:\n");
+    scanf("%f", &produtoV);
+
+    desc_10 = produtoV * 0.1;
+    produto_desc = produtoV - desc_10;
+    printf("O valor do produto com 10 porcento de descoto eh de: \nR$%.2f.\n", produto_desc);
+
+    parcelamento = produtoV / 3;
+    printf("O valor do produto parcelado em tres vezes sem juros foi de: \nR$%.2f.\n", parcelamento);
+
+    comissa_avista = produto_desc * 0.05;
+    printf("Considerando pagamento avista, a comissao do vendedor sera de:\nR$%.2f\n.", comissa_avista);
+
+    comissao_parcel = produtoV * 0.05;
+    printf("Considerando pagamento parcelada, a comissao do vendedor sera de:\nR$%.2f\n.", comissao_parcel);
+
+    printf("\nFim do programa!\n");
+    printf("\n");
+    system("pause");
+    return 0;
+} 
+
+*/
+// ======================================================
+
+
+//==================== Exercicio 44 =====================
+// Receba a altura do degrau de uma escada e a altura que o usuário deseja alcançar subindo a escada. Calcule e mostre quantos degraus o usuário deverá subir para atingir seu objetivo.
+
+/*
+#include <stdio.h>
+#include <stdlib.h>
+
+int main (){
+
+    float alt_deg, alt_alcanc, quant_deg;
+
+    printf("Nesse programa sera dada a quantidade de degraus que voce devera subir, considerando a altura dos degraus e a altura que deseja atingir subindo.\nPrimeiro, digite a altura dos degraus em centimetro:\n");
+    scanf("%f", &alt_deg);
+
+    printf("Agora digite a altura que almeja subir em metros:\n" );
+    scanf("%f", &alt_alcanc);
+
+    quant_deg= (alt_deg*100) * alt_alcanc;
+    printf("A quantidade de degraus que devera subir eh:%.f\n", quant_deg);
+
+    printf("\nFim do programa!\n");
+    printf("\n");
+    system("pause");
+    return 0;
+} 
+*/
+// ======================================================
+
+
+//==================== Exercicio 45 =====================
+// Faça um programa para converter uma letra maiúscula em letra minúscula. Use a tabela ASCII para resolver o problema.
+/*
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main (){
+
+    char letra_;
+    printf("Digite uma letra minuscula para transformar em maiuscula:\n");
+    scanf("%c", &letra_);
+    letra_ = toupper(letra_);
+    printf("\nEssa letra em maiusculo sera demonstrado da seguinte forma:\n%c" , letra_);
+
+    printf("Fim do programa!\n");
+    printf("\n");
+    system("pause");
+    return 0;
+} 
+*/
+// ======================================================
+
+
+//==================== Exercicio 46 =====================
+/* Faça um programa que leia um número inteiro positivo de três dígitos (de 100 a 999). Gere
+outro número formado pelos dígitos invertidos do número lido. Exemplo:
+- Numero_lido = 123
+- Numero_gerado = 321
+*/
+
+// Nessa questao foi usado a seguinte logica matematica: dividimos por 10 o numero que queremos inverter. Iniciamos a divisao de 543 como exemplo, e ela tera como quociente inteiro 54, e resto 3. Esse resto sera nosso primeiro numero; em segundo temos a divisao com 54 (o quociente anterior), que tera como resultado inteiro 5, e resto da conta 4. Por nao ter como continuar, fica: 3 como primeiro algorismo por ser o primeiro resto da primeira conta; e sguimos com a segunda conta, que dara como segundo numero o resto da divisao, 4; e por ulimo o inteiro 3, quecoeinte da segunda conta.
+
+/*
+#include <stdio.h>
+#include <stdlib.h>
+
+int main (){
+
+    int num_00, num_01, num_02, num_03;
+    printf("Digite um numero positivos de tres digitos, ele sera invertido:\n");
+    scanf("%d", &num_00);
+ 
+    num_01 = num_00%10;
+	num_00 = num_00/10;
+	num_02 = num_00%10;
+	num_00 = num_00/10;
+	num_03 = num_00%10;
+	num_00 = num_00/10;
+
+    printf("%d%d%d\n", num_01, num_02, num_03);
+
+    printf("Fim do programa!\n");
+    printf("\n");
+    system("pause");
+    return 0;
+} 
+*/
+// ======================================================
+
+
+//==================== Exercicio 47 =====================
+// Leia um número inteiro de 4 dígitos (de 1000 a 9999) e imprima 1 dígito por linha.
+//
+/*
+#include <stdio.h>
+#include <stdlib.h>
+
+int main (){
+
+        int num, num1, num2, num3, num4;
+        printf("Digite um numero inteiro de 4 digitos (1000 a 9999):\n");
+        scanf("%d", &num);
+        num1= num%10;
+        num2= (num%100)/10;
+        num3= (num%1000)/100;
+        num4= (num%10000)/1000;
+
+        printf("\n %d", num4);
+        printf("\n %d", num3);
+        printf("\n %d", num2);
+        printf("\n %d \n", num1);
+
+    printf("\nFim do programa!\n");
+    printf("\n");
+    system("pause");
+    return 0;
+} 
+*/
+// ======================================================
+
+
+//==================== Exercicio 48 =====================
+// Leia um valor inteiro em segundos, e imprima-o em horas, minutos e segundos.
+/*
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main (){
+
+    float segun, min, hora;
+
+    printf("Digite um valor em segundos, e ele sera expresso em horas, minutos e segundos:\n");
+    scanf("%f", &segun);
+
+    hora= segun / 3600;
+    min= segun / 60;
+
+    printf("\nDado o valor, ele sera convertido em: \n%.2f h;  ", hora);
+    printf("%.1f m;  ", min);
+    printf("%.f s.\n", segun);
+
+    printf("\nFim do programa!\n");
+    printf("\n");
+    system("pause");
+    return 0;
+} 
+*/
+// ======================================================
+
+
+//==================== Exercicio 49 =====================
+// Faça um programa para leia o horário (hora, minuto e segundo) de início e a duração, em segundos, de uma experiência biológica. O programa deve resultar com o novo horário (hora, minuto e segundo) do termino da mesma.
+/*
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+int main (){
+
+    int n01, n02, n03, hor_ini, duracao, hora_min, hora_h;
+
+    printf("Vamos calcular o horario que seu experimento finalizara com base em dois dados que precisara aparesentar. O horario que esse experimento iniciou, e a duracao em segundos.\n- Com isso, vamos iniciar com o horario. Digite o horario, incluindo horas, minutos e segundos. OBS- Separados por espacos: ");
+        scanf("%d", &n01);
+        scanf("%d", &n02);
+        scanf("%d", &n03);
+
+    printf("- Agora apresente a duracao do experimento. Lembrando ser em segundos:");
+    scanf("%d", &duracao);
+
+    if (duracao > 0, duracao < 59)
+    n03 = n03 + duracao;
+
+    if (duracao > 60)
+    hora_min = duracao / 60;
+    if (duracao > 60)
+    n02 = n02 + hora_min;
+
+    if (duracao >120)
+    hora_h = duracao / 3600;
+    if (duracao >120)
+    n01 = n01+ hora_h;
+    
+    printf("\nCom base nos dados apresentados, a hora que esse experimento terminara eh: %dh ", n01);
+    printf("%dm ", n02);
+    printf("%ds ", n03);
+
+
+    printf("\nFim do programa!\n");
+    printf("\n");
+    system("pause");
+    return 0;
+} 
+*/
+// ======================================================
+
+
+//==================== Exercicio 50 =====================
+//Implemente um programa que calcule o ano de nascimento de uma pessoa a partir de sua idade e do ano atual
+/*
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main (){
+
+    float x = 0;
+    float y = 0;
+    float R = 0;
+    printf ("Digite a coordenada x: \n");
+    scanf ("%f", &x);
+    printf ("Digite a coordenada y: \n");
+    scanf ("%f", &y);
+    R=sqrt(pow(x,2)+pow(y,2));
+    printf("A distancia e: %f \n", R);
+
+    printf("\nFim do programa!\n");
+    printf("\n");
+    system("pause");
+    return 0;
+}
+*/
+// ======================================================
+
+
+//==================== Exercicio 51 =====================
+// Implemente um programa que calcule o ano de nascimento de uma pessoa a partir de sua idade e do ano atual
+/*
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main (){
+
+    int idade_at, ano_at, ano_nasc;
+    printf("Com base no ano atual, e a sua idade, vamos considerar seu ano de nascimento. Digite primeiro sua idade e depois o ano atual: ");
+        scanf("%d", &idade_at);
+        scanf("%d", &ano_at);
+
+    ano_nasc = ano_at - idade_at;
+
+    printf("Seu ano de nascimento, considerando que ja fez aniversario esse ano, eh: %d.", ano_nasc);
+
+    printf("\nFim do programa!\n");
+    printf("\n");
+    system("pause");
+    return 0;
+}
+*/
+// ======================================================
+
+
+//==================== Exercicio 52 =====================
+// Três amigos jogaram na loteria. Caso eles ganhem, o prêmio deve ser repartido proporcionalmente ao valor que cada deu para a realização da aposta. Faça um programa que leia quanto cada apostador investiu, o valor do prêmio, e imprima quanto cada um ganharia do prêmio com base no valor investido.
+/*
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+int main (){
+
+    float a, b, c, apos_inv1, apos_inv2, apos_inv3, apos_invALL, valor_PR, val_pr1, val_pr2, val_pr3;
+
+    printf("Vamos calcular o premio devido a cada um dos tres jogadores. Consideraremos, apostador 'a', 'b' e 'c' ate o final do calculo.\n");
+
+    printf("\nValor aposta amigo 1: ");
+    scanf("%f", &a);
+    printf("\nValor aposta amigo 2: ");
+    scanf("%f", &b);
+    printf("\nValor aposta amigo 3: ");
+    scanf("%f", &c);
+    
+    apos_invALL = a + b + c;
+
+    printf("\n= O valor que investiram para as apostas foi de: %.2f.\n" , apos_invALL);
+
+    printf("\n- Segundo, agora digite o valor do premio: ");
+    scanf("%f", &valor_PR);
+
+        apos_inv1 = (a * 100) / apos_invALL;
+        apos_inv2 = (b * 100) / apos_invALL;
+        apos_inv3 = (c * 100) / apos_invALL;
+
+    printf("Considerando as informacoes dadas, sera: \n");
+    printf("\n- Apostador 'a' ganhara: %.f;", valor_PR * apos_inv1/100);
+    printf("\n- Dado o seu investimeno que aprenta: %.1f porcento do ganho obtido.", apos_inv1);
+    printf("\n- Apostador 'b' ganhara: %.f;", valor_PR * apos_inv2/100);
+    printf("\n- Dado o seu investimeno que aprenta: %.1f porcento do ganho obtido.", apos_inv2);
+    printf("\n- Apostador 'c' ganhara: %.f;", valor_PR * apos_inv3/100);
+    printf("\n- Dado o seu investimeno que aprenta: %.1f porcento do ganho obtido.\n", apos_inv3);
+
+    printf("\nFim do programa!\n");
+    printf("\n");
+    system("pause");
+    return 0;
+}
+*/
+// ======================================================
+
+
+//==================== Exercicio 53 =====================
+// Faça um programa para ler as dimensões de um terreno (comprimento c e largura l), bem como o preço do metro de tela p. Imprima o custo para cercar este mesmo terreno com tela.
+/*
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main (){
+
+    
 
     printf("\nFim do programa!\n");
     printf("\n");
