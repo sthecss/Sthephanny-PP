@@ -82,8 +82,10 @@ int main() {
 #include <stdlib.h>
 
 int main() {
-    float n01 = 25;
-    printf("O quadrado de 25 eh = %.2f", n01*n01);
+    float n01;
+    printf("Digite um valor para ser calculado o seu quadrado: \n");
+    scanf("%f", &n01);
+    printf("O quadrado do numero eh: %.f", n01*n01);
     printf("\n\n");
    
     printf("Fim do programa!\n");
@@ -96,13 +98,14 @@ int main() {
 
 // ==================== Exercicio 05 ====================
 //  Leia um número real e imprima a quinta parte deste número.
-/*
+//*
 
 #include <stdio.h>
 #include <stdlib.h>
 
 int main() {
-    float n01 = 25;
+    float n01;
+    printf("")
     printf("A quinta parte de 25 e = %.2f", n1/5);
     printf("\n\n");
 
@@ -110,7 +113,7 @@ int main() {
     system("pause");
     return 0;
 }
-*/
+//*/
 // ====================================================== 
 
 
@@ -1237,45 +1240,62 @@ int main (){
 #include <math.h>
 int main (){
 
-    int n01, n02, n03, hor_ini, duracao, hora_min, hora_h;
+    int hor, min, seg, duracao, s1, s2, s3, t1, t2, t3;
 
     printf("Vamos calcular o horario que seu experimento finalizara com base em dois dados que precisara aparesentar. O horario que esse experimento iniciou, e a duracao em segundos.\n- Com isso, vamos iniciar com o horario. Digite o horario, incluindo horas, minutos e segundos. OBS- Separados por espacos: ");
-        scanf("%d", &n01);
-        scanf("%d", &n02);
-        scanf("%d", &n03);
+        scanf("%d", &t1);
+        scanf("%d", &t2);
+        scanf("%d", &t3);
 
     printf("- Agora apresente a duracao do experimento. Lembrando ser em segundos:");
     scanf("%d", &duracao);
 
-    if (duracao > 0, duracao < 59)
-    n03 = n03 + duracao;
-
-    if (duracao > 60)
-    hora_min = duracao / 60;
-    if (duracao > 60)
-    n02 = n02 + hora_min;
-
-    if (duracao >120)
-    hora_h = duracao / 3600;
-    if (duracao >120)
-    n01 = n01+ hora_h;
+        hor = duracao / 3600;
+        min = (duracao % 3600) / 60;
+        seg = ((duracao % 3600) % 60);
+        s1 = hor + t1;
+        s2 = min + t2;
+        s3 = seg + t3;
     
-    printf("\nCom base nos dados apresentados, a hora que esse experimento terminara eh: %dh ", n01);
-    printf("%dm ", n02);
-    printf("%ds ", n03);
-
+    printf("\nCom base nos dados apresentados, a hora que esse experimento terminara eh: %dh %dm, %ds", s1, s2, s3);
 
     printf("\nFim do programa!\n");
     printf("\n");
     system("pause");
     return 0;
 } 
-*/
+
 // ======================================================
 
 
 //==================== Exercicio 50 =====================
 //Implemente um programa que calcule o ano de nascimento de uma pessoa a partir de sua idade e do ano atual
+/*
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main (){
+
+    int idade_at, ano_at, ano_nasc;
+    printf("Com base no ano atual, e a sua idade, vamos considerar seu ano de nascimento. Digite primeiro sua idade e depois o ano atual: ");
+        scanf("%d", &idade_at);
+        scanf("%d", &ano_at);
+
+    ano_nasc = ano_at - idade_at;
+
+    printf("Seu ano de nascimento, considerando que ja fez aniversario esse ano, eh: %d.", ano_nasc);
+
+    printf("\nFim do programa!\n");
+    printf("\n");
+    system("pause");
+ 
+*/
+// ======================================================
+
+
+//==================== Exercicio 51 =====================
+// Escreva um programa que leia as coordenadas x e y de pontos no R2 e calcule sua distância da origem (0, 0)
 /*
 #include <stdio.h>
 #include <stdlib.h>
@@ -1298,32 +1318,7 @@ int main (){
     system("pause");
     return 0;
 }
-*/
-// ======================================================
-
-
-//==================== Exercicio 51 =====================
-// Implemente um programa que calcule o ano de nascimento de uma pessoa a partir de sua idade e do ano atual
-/*
-#include <stdio.h>
-#include <stdlib.h>
-#include <math.h>
-
-int main (){
-
-    int idade_at, ano_at, ano_nasc;
-    printf("Com base no ano atual, e a sua idade, vamos considerar seu ano de nascimento. Digite primeiro sua idade e depois o ano atual: ");
-        scanf("%d", &idade_at);
-        scanf("%d", &ano_at);
-
-    ano_nasc = ano_at - idade_at;
-
-    printf("Seu ano de nascimento, considerando que ja fez aniversario esse ano, eh: %d.", ano_nasc);
-
-    printf("\nFim do programa!\n");
-    printf("\n");
-    system("pause");
-    return 0;
+   return 0;
 }
 */
 // ======================================================
