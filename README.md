@@ -38,6 +38,5 @@
 
 》═══════════════════════~◈~═══════════════════════《
 
-<p align="center">
 <a href="https://imgur.com/05qSkrd"><img src="https://i.imgur.com/05qSkrd.gif" title="source: imgur.com" /></a>
 
