@@ -21,14 +21,16 @@
 <img src= "https://img.shields.io/badge/Lab01-071022-informational"/>
 <img src= "https://img.shields.io/badge/Lab01-071022-sucess"/>
   <p> Trabalho que envolveu conhecer a IDE. Quebramos a maldição do Hello World, e fizemos um programa básico envolvendo números reais e fatorial. </p>
-  <p> Link: </p>
+  <p> Link: https://github.com/sthecss/GBC014-PP/blob/main/LAB%2001/calculadora.C </p>
+
 </div>
 
 
 <div>
 <img src= "https://img.shields.io/badge/Lab02-141022-informational"/>
-<img src= "https://img.shields.io/badge/Lab02-Desenvolvimento-sucess"/>
-  <p> Trabalho com desenvolvimento iniciado. 13/10. </p>
+<img src= "https://img.shields.io/badge/Lab02-191022-sucess"/>
+  <p> Trabalho com 53 questoes diversas para nos familiarizarmos com a programacao. </p>
+  <p> Link: https://github.com/sthecss/GBC014-PP/blob/main/LAB%2002/53%20exercicios.c </p>
 </div>
 
 
