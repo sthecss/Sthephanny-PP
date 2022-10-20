@@ -35,7 +35,7 @@ int main (){
 int main (){
 
     float real;
-    printf("Digite um numero inteiro para que eu possa repetir:\n");
+    printf("Digite um numero inteiro para que possa remostrar:\n");
     scanf("%f", &real);
 
     printf("Seu numero foi (ele sera apresentado com 5 casas depois da virgula):\n%.5f.", real);
@@ -98,22 +98,23 @@ int main() {
 
 // ==================== Exercicio 05 ====================
 //  Leia um número real e imprima a quinta parte deste número.
-//*
+/*
 
 #include <stdio.h>
 #include <stdlib.h>
 
 int main() {
     float n01;
-    printf("")
-    printf("A quinta parte de 25 e = %.2f", n1/5);
+    printf("Digite um valor para ser mostrada a sua quinta parte:");
+    scanf("%f", &n01);
+    printf("A quinta parte eh = %.2f", n01/5);
     printf("\n\n");
 
     printf("Fim do programa!\n");
     system("pause");
     return 0;
 }
-//*/
+*/
 // ====================================================== 
 
 
@@ -1355,11 +1356,11 @@ int main (){
         apos_inv3 = (c * 100) / apos_invALL;
 
     printf("Considerando as informacoes dadas, sera: \n");
-    printf("\n- Apostador 'a' ganhara: %.f;", valor_PR * apos_inv1/100);
+    printf("\n- Amigo 'a' ganhara: %.f;", valor_PR * apos_inv1/100);
     printf("\n- Dado o seu investimeno que aprenta: %.1f porcento do ganho obtido.", apos_inv1);
-    printf("\n- Apostador 'b' ganhara: %.f;", valor_PR * apos_inv2/100);
+    printf("\n- Amigo 'b' ganhara: %.f;", valor_PR * apos_inv2/100);
     printf("\n- Dado o seu investimeno que aprenta: %.1f porcento do ganho obtido.", apos_inv2);
-    printf("\n- Apostador 'c' ganhara: %.f;", valor_PR * apos_inv3/100);
+    printf("\n- Amigo 'c' ganhara: %.f;", valor_PR * apos_inv3/100);
     printf("\n- Dado o seu investimeno que aprenta: %.1f porcento do ganho obtido.\n", apos_inv3);
 
     printf("\nFim do programa!\n");
@@ -1380,7 +1381,15 @@ int main (){
 
 int main (){
 
-    
+    float comp, larg, telap, preco, pr;
+    printf("Apresente a dimensao do terreno em comprimento e largura, respectivamente:\n");
+    scanf("%f %f", &comp, &larg);
+    printf("Digite o valor do preco do metro:\nR$ ");
+    scanf("%f", &preco);
+    pr = comp + larg;
+    telap = pr * preco;
+
+    printf("O custo para cercar este terreno eh:\nR$ %.2f", telap);
 
     printf("\nFim do programa!\n");
     printf("\n");
