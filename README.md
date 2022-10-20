@@ -17,14 +17,17 @@
 <h2> Abaixo um pequeno "sumário" dos trabalhos desenvolvidos. </h2>
 <h3> Em label AZUL a data que foi oficialmente entregue (sexta-feiras), e em VERDE a minha conclusão. </h3>
 
+
+》═══════════════════════~◈~═══════════════════════《
+</p>
 <div>
 <img src= "https://img.shields.io/badge/Lab01-071022-informational"/>
 <img src= "https://img.shields.io/badge/Lab01-071022-sucess"/>
   <p> Trabalho que envolveu conhecer a IDE. Quebramos a maldição do Hello World, e fizemos um programa básico envolvendo números reais e fatorial. </p>
   <p> Link: https://github.com/sthecss/GBC014-PP/blob/main/LAB%2001/calculadora.C </p>
-
 </div>
 
+》═══════════════════════~◈~═══════════════════════《
 
 <div>
 <img src= "https://img.shields.io/badge/Lab02-141022-informational"/>
@@ -33,6 +36,7 @@
   <p> Link: https://github.com/sthecss/GBC014-PP/blob/main/LAB%2002/53%20exercicios.c </p>
 </div>
 
+》═══════════════════════~◈~═══════════════════════《
 
 <p align="center">
 <a href="https://imgur.com/05qSkrd"><img src="https://i.imgur.com/05qSkrd.gif" title="source: imgur.com" /></a>
