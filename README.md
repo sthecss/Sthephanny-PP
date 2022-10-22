@@ -35,7 +35,7 @@ Maticula: 12211BCC044</h3>
 <div>
 <img src= "https://img.shields.io/badge/Lab02-141022-informational"/>
 <img src= "https://img.shields.io/badge/Lab02-191022-sucess"/>
-  <p> Trabalho com 53 questoes diversas para nos familiarizarmos com a programacao. </p>
+  <p> Trabalho com 53 questoes diversas para nos familiarizarmos com a programacao em C. </p>
   <p> Link: https://github.com/sthecss/GBC014-PP/blob/main/LAB%2002/53%20exercicios.c </p>
 </div>
 
