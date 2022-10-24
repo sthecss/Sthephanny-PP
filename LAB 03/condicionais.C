@@ -18,14 +18,13 @@
 int main (){
 
     int x1, x2;
-    printf("Digite dois numeros reais, e sera mostrado o de maior valor: ");
+    printf("\nDigite dois numeros reais, e sera mostrado o de maior valor: ");
     scanf("%d""%d", &x1, &x2);
 
     if (x1 > x2) {
       printf("O maior eh: %d.\n", x1);
-    }
-
-    if (x2 > x1) {
+    } else {
+      (x2 > x1);
       printf("O maior eh: %d.\n", x2);
     }
 
@@ -52,11 +51,10 @@ int main (){
 
     if (num > 0){
       raiz_quad = sqrt(num);
-      printf("A raiz quadrada desse numeros eh de:%.4f\n", raiz_quad);
-    }
-
-    if (num < 0){
-      printf("ERRO. O numero que digitou eh negativo.\n");
+      printf("A raiz quadrada desse numeros eh de:%.2f\n", raiz_quad);
+    } else {
+        (num < 0);
+        printf("ERRO. O numero que digitou eh negativo.\n");
     }
 
     printf("\nFim do programa!\n\n");
@@ -76,17 +74,17 @@ int main (){
 
 int main (){
 
-    float num, raiz_quad, expo;
+    float num;
     printf("\nDigite um valor real: ");
     scanf("%f", &num);
+
     if (num > 0){
-        raiz_quad = sqrt(num);
-        printf("A raiz quadrada desse numeros eh de: %.4f\n", raiz_quad);
-    }
-    if (num < 0){
-        expo = pow(num, 2); 	
-        printf("Esse numero ao quadrdo eh de: %.f\n", expo);
-  }
+        printf("A raiz quadrada desse numeros eh de: %.2f\n", sqrt(num));
+    } else {
+        (num < 0);	
+        printf("Esse numero ao quadrado eh: %.f\n", pow(num, 2));
+    } 
+
     printf("\nFim do programa!\n\n");
     system("pause");
     return 0;
@@ -107,26 +105,23 @@ int main (){
 
 int main (){
 
-    float num, raiz_quad, expo;
+    float num;
     printf("\nDigite um valor real: ");
     scanf("%f", &num);
 
     if (num > 0){
-        raiz_quad = sqrt(num);
-        printf("A raiz quadrada desse numeros eh de: %.4f\n", raiz_quad);
-        expo = pow(num, 2); 	
-        printf("Esse numero ao quadrdo eh de: %4.f\n", expo);
-    }
-
-    if (num < 0){
-        printf("ERRO. O numero que digitou eh negativo. Redigite.\n");
+          printf("- A raiz quadrada desse numero eh: %.2f\n", sqrt(num));
+          printf("- E esse numero ao quadrado eh: %4.f\n", pow(num, 2));
+    } else {
+        (num < 0);
+          printf("ERRO. O numero que digitou eh negativo. Redigite.\n");
     }
 
     printf("\nFim do programa!\n\n");
     system("pause");
     return 0;
 } 
-//*/
+*/
 // ======================================================
 
 
@@ -138,7 +133,6 @@ int main (){
 #include <math.h>
 
 int main (){
-
     int num, zero;
     zero= 0;
 
@@ -146,11 +140,10 @@ int main (){
     scanf("%d", &num);
 
     if (num%2 == 0){
-        printf("O numero digitado eh par.\n", num);
-    }
-
-    if ((num%2) != zero){
-        printf("O numero eh impar.\n", num);
+          printf("O numero digitado eh par.\n", num);
+    } else {
+        ((num%2) != zero);
+          printf("O numero eh impar.\n", num);
     }
 
     printf("\nFim do programa!\n\n");
@@ -175,13 +168,12 @@ int main (){
     scanf("%f" "%f", &x1, &x2);
 
     if (x1 > x2) {
-      printf("%.f eh maior.\n", x1);
-      printf("E a diferenca entre ambos eh: %.f\n", (x1-x2));
-    }
-
-    if (x2 > x1) {
-      printf("%.f eh maior.\n", x2);
-      printf("E a diferenca entre ambos eh: %.f\n", (x2-x1));
+          printf("%.f eh maior.\n", x1);
+          printf("E a diferenca entre ambos eh: %.f\n", (x1-x2));
+    } else {
+        (x2 > x1);
+          printf("%.f eh maior.\n", x2);
+          printf("E a diferenca entre ambos eh: %.f\n", (x2-x1));
     }
 
     printf("Fim do programa!\n\n");
@@ -203,15 +195,16 @@ int main (){
     float x1, x2, xS;
     printf("\nDigite dois numeros inteiros separados por espaco: ");
     scanf("%f" "%f", &x1, &x2);
-    if (x1 > x2) {
-      printf("- %.f eh maior.\n", x1);
-    }
-    if (x2 > x1) {
-      printf("- %.f eh maior.\n", x2);
-    }
+
     if (x1 == x2){
       printf("- Numeros iguais.\n");
-    } 
+
+    } else {
+      if (x1 > x2)
+        printf("- %.f eh maior.\n", x1);
+          else printf("- %.f eh maior.\n", x2);
+    }
+
     printf("Fim do programa!\n\n");
     system("pause");
     return 0;
@@ -232,12 +225,13 @@ int main (){
     float N1, N2;
     printf("Digite duas notas: ");
     scanf("%f" "%f", &N1, &N2);
-    if((N1>0, N1<=10)&&(N2>0, N2<=10)){
-    printf("A media das notas apresentadas eh de: %.2f", (N1+N2)/2);
-    } 
-    if ((N1<0, N1>10)&&(N2<0,N2>10)){
-      printf("Nota invalida.");
+
+    if( 0 <= N1 && N1 <= 10 && 0 <= N2 && N2 <= 10) {
+      printf("A media das notas apresentadas eh de: %.2f", (N1+N2)/2);
+    } else{
+      printf("Valor da nota invalida. Tente de novo.");
     }
+
     printf("\nFim do programa!\n");
     printf("\n");
     system("pause");
@@ -258,17 +252,16 @@ int main (){
 
   int salario, emprestimo, equivalencia, salario_20;
 
-    printf("Digite o salario e o valor da prestacao do emprestimo:");
+    printf("\nDigite o salario e o valor da prestacao do emprestimo: ");
     scanf("%d" "%d", &salario, &emprestimo);
 
     salario_20 = salario/5;
 
     if (salario_20 > emprestimo){
-      printf("Emprestimo concedido");
-    }
-
-    if (salario_20 < emprestimo){
-      printf("Emprestimo nao concedido");
+        printf("> > > Emprestimo concedido. < < <");
+    } else {
+        (salario_20 < emprestimo);
+        printf("> > > Emprestimo nao concedido. < < <");
     }
 
     printf("\nFim do programa!\n\n");
@@ -321,52 +314,57 @@ int main (){
 
 // ==================== Exercicio 11 =====================
 // Escreva um programa que leia um número inteiro maior do que zero e devolva, na tela, a soma de todos os seus algarismos. Por exemplo, ao número 251 corresponderá o valor 8 (2 + 5 + 1). Se o número lido não for maior do que zero, o programa terminará com a mensagem: “Número inválido.
-
-///*
-#include <stdio.h>
-#include <stdlib.h>
-#include <math.h>
-
-int main (){
-
-    int num, num_01, num_00, num_02, num_03,soma;
-    printf("Digite um numero: \n");
-    scanf("%d", &num_00);
-
-    while (/* condition */)
-    {
-      /* code */
-    }
-    
-    num_01 = num_00%10;       num_00 = num_00/10;
-	  num_02 = num_00%10;       num_00 = num_00/10;
-	  num_03 = num_00%10;       num_00 = num_00/10;
-
-    
-    soma= num_01+num_02+num_03;
-
-    printf("A some eh: %d\n", soma);
-
-    printf("Fim do programa!\n\n");
-    system("pause");
-    return 0;
-
-} 
-//*/
-// ======================================================
-
-
-// ==================== Exercicio 12 =====================
-// 
 /*
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
 int main (){
+  
+    int num,soma;
+    soma=0;
+
+    printf("Digite um numero inteiro e positivo qualquer: ");
+    scanf("%d",&num);
+
+   if(num>0){
+       while(num>0){
+       soma=soma+num%10;
+       num=num/10;
+       }
+       printf("A soma dos algarismos desse numero eh de: %d\n",soma);
+   }else{
+       printf("O numero eh invalido.");
+   }
+
+    printf("\nFim do programa!\n\n");
+    system("pause");
+    return 0;
+} 
+*/
+// ======================================================
 
 
-    printf("Fim do programa!\n\n");
+// ==================== Exercicio 12 =====================
+// Ler um número inteiro. Se o número lido for negativo, escreva a mensagem “Número inválido”. Se o número for positivo, calcular o logaritmo deste número.
+/*
+#include <stdio.h>
+#include <conio.h>
+#include <math.h>
+
+int main (){
+
+    float num;
+    printf("\nDigite um numero inteiro qualquer: ");
+    scanf("%f",&num);
+
+    if (num > 0) {
+        printf("O log do numero, com base e, eh de: %.f = %.2f \n",num,log(num));
+    }else{ 
+        printf("Numero invalido.");
+    }
+
+    printf("\nFim do programa!\n\n");
     system("pause");
     return 0;
 } 
@@ -375,7 +373,7 @@ int main (){
 
 
 // ==================== Exercicio 13 =====================
-// 
+// Faça um algoritmo que calcule a média ponderada das notas de 3 provas. A primeira e a segunda prova têm peso 1 e a terceira tem peso 2. Ao final, mostrar a média do estudante e indicar se o estudante foi aprovado ou reprovado. A nota para aprovação deve ser igual ou superior a 60 pontos.
 /*
 #include <stdio.h>
 #include <stdlib.h>
@@ -383,8 +381,21 @@ int main (){
 
 int main (){
 
+    float N1, N2, N3, NM;
+    printf("\nDigite as tres notas: ");
+    scanf("%f" "%f" "%f", &N1, &N2, &N3);
 
-    printf("Fim do programa!\n\n");
+    NM = (  (N1*1) + (N2*1) + (N3*2)  ) / (1+1+2);
+
+    if(  ( NM >= 60 ) )  {
+      printf("A media das notas apresentadas eh de: %.2f.\n", NM);
+      printf("> > > Voce foi APROVADO. < < <\n");
+    } else {
+      printf("A media das notas apresentadas eh de: %.2f.\n", NM);
+      printf("> > > Voce foi REPROVADO. < < <\n");
+    }
+
+    printf("\nFim do programa!\n\n");
     system("pause");
     return 0;
 } 
@@ -393,7 +404,13 @@ int main (){
 
 
 // ==================== Exercicio 14 =====================
-// 
+/* A nota final de um estudante é calculada a partir de três notas atribuídas entre o intervalo de 0 até 10, respectivamente, a um trabalho de laboratório, a uma avaliação semestral e a um exame final. A média das três notas mencionadas anteriormente obedece aos pesos:
+- Trabalho de Laboratório: 2;
+- Avaliação Semestral: 3;
+- Exame Final: 5.
+De acordo com o resultado, mostre na tela se o aluno está reprovado (média entre 0 e 2,9), de recuperação (entre 3 e 4,9) ou se foi aprovado.
+Faça todas as verificações necessárias.
+*/
 /*
 #include <stdio.h>
 #include <stdlib.h>
@@ -401,17 +418,38 @@ int main (){
 
 int main (){
 
+    float nlab, nsem, nexf, nmed;
 
-    printf("Fim do programa!\n\n");
+    printf("\nDigite a sua nota no Trabalho de Laboratorio: ");
+    scanf("%f", &nlab);
+        printf("Digite a sua nota no Avaliacao Semestral: ");
+        scanf("%f", &nsem);
+            printf("Digite a sua nota no Exame Final: ");
+            scanf("%f", &nexf);
+
+    nmed = ( (nlab*2) + (nsem*3) + (nexf*5) ) / (2+3+5);
+
+    if (nmed==0 , nmed <= 2.9) {
+    printf ("Sua media foi: %.2f, portando foi > > REPROVADO < <.\n", nmed);
+
+      }else{ 
+
+          if (nmed>2.9, nmed<5)
+          printf ("Sua media foi: %.2f, portando esta de > > RECUPERACAO < <.\n", nmed);
+
+              else printf ("Sua media foi de: %.2f, portanto foi > > APROVADO < <.", nmed);
+      }
+
+    printf("\nFim do programa!\n\n");
     system("pause");
     return 0;
-} 
+}
 */
 // ======================================================
 
 
 // ==================== Exercicio 15 =====================
-// 
+// Usando switch, escreva um programa que leia um inteiro entre 1 e 7 e imprima o dia da semana correspondente a este número. Isto é, domingo se 1, segunda-feira se 2, e assim por diante.
 /*
 #include <stdio.h>
 #include <stdlib.h>
@@ -419,8 +457,35 @@ int main (){
 
 int main (){
 
+  char num;
+        printf("\nDigite um numero entre 1 e 7: ");
+        scanf("%c", &num);
 
-    printf("Fim do programa!\n\n");
+  switch( num )
+        {
+    case '1':
+    printf("O dia da semana eh: Domingo.");
+    break;
+        case '2':
+        printf("O dia da semana eh: Segunda-Feira.");
+        break;
+            case '3':
+            printf("O dia da semana eh: Terca-Feira.");
+            break;
+                case '4':
+                printf("O dia da semana eh: Quarta-Feira..");
+                  break;
+                      case '5':
+                      printf("O dia da semana eh: Quinta-Feira.");
+                        break;
+                            case '6':
+                            printf("O dia da semana eh: Sexta-Feira.");
+                            break;
+                                case '7':
+                                  printf("O dia da semana eh: Sabado.");
+                                  break;
+        }
+    printf("\n\nFim do programa!\n\n");
     system("pause");
     return 0;
 } 
@@ -429,7 +494,7 @@ int main (){
 
 
 // ==================== Exercicio 16 =====================
-// 
+// Usando switch, escreva um programa que leia um inteiro entre 1 e 12 e imprima o mês correspondente a este número. Isto é, janeiro se 1, fevereiro se 2, e assim por diante.
 /*
 #include <stdio.h>
 #include <stdlib.h>
@@ -437,26 +502,61 @@ int main (){
 
 int main (){
 
+char num;
+        printf("\nDigite um numero entre 1 e 12: ");
+        scanf("%d", &num);
 
-    printf("Fim do programa!\n\n");
+  switch( num )
+  {
+    case 1:       printf("O mes eh: Janeiro.");         break;
+    case 2:       printf("O mes eh: Fevereiro.");       break;
+    case 3:       printf("O mes eh: Marco.");           break;
+    case 4:       printf("O mes eh: Abril.");           break;
+    case 5:       printf("O mes eh: Maio.");            break;
+    case 6:       printf("O mes eh: Junho.");           break;
+    case 7:       printf("O mes eh: Julho.");           break;
+    case 8:       printf("O mes eh: Agosto.");          break;
+    case 9:       printf("O mes eh: Setembro.");        break;
+    case 10:      printf("O mes eh: Outubro.");         break;
+    case 11:      printf("O mes eh: Novembro.");        break;
+    case 12:      printf("O mes eh: Dezembro.");        break;
+  }
+    printf("\n\nFim do programa!\n\n");
     system("pause");
     return 0;
 } 
-//*/
+*/
 // ======================================================
 
 
 // ==================== Exercicio 17 =====================
-// 
+/*Faça um programa que calcule e mostre a área de um trapézio. Sabe-se que:
+𝐴 = (basemaior + basemenor) ∗ altura / 2
+Lembre-se a base maior e a base menor devem ser números maiores que zero.
+*/
 /*
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
 int main (){
+    float base_M, base_m, altura;
+
+    printf("\nPara calcular a area do trapezio, digite\n- A base maior: ");
+    scanf("%f", &base_M);
+    printf("- A mase menor: ");
+    scanf("%f", &base_m);
+    printf("- E por fim a altura: ");
+    scanf("%f", &altura);
+
+    if ( base_M > 0 && base_m > 0) {
+       printf("A area do trapezio eh: %.2f.", (base_M + base_m) * altura / 2);
+    }else{
+        printf("> > ERRO < <\nValor das bases invalida, tente novamente.");
+    }
 
 
-    printf("Fim do programa!\n\n");
+    printf("\n\nFim do programa!\n\n");
     system("pause");
     return 0;
 } 
@@ -465,7 +565,7 @@ int main (){
 
 
 // ==================== Exercicio 18 =====================
-// 
+// Faça um programa que mostre ao usuário um menu com 4 opções de operações matemáticas (as básicas, por exemplo). O usuário escolhe uma das opções e o seu programa então pede dois valores numéricos e realiza a operação, mostrando o resultado e saindo.
 /*
 #include <stdio.h>
 #include <stdlib.h>
@@ -473,8 +573,35 @@ int main (){
 
 int main (){
 
+char conta;
+    float num1, num2;
+        printf("\nVamos calcular.\n- Para somar digite: +\n- Para subtrair digite: -\n- Para multiplicar digite: *\n- Para dividir digite: /\nSua escolha eh: ");
+        scanf("%c", &conta);
 
-    printf("Fim do programa!\n\n");
+    switch( conta )
+        {
+            case '+' :
+                printf("Digite dois numeros: ");
+                scanf("%f" "%f", &num1, &num2);
+                printf("A soma de dois numeros eh: > > %.2f < < ", (num1 + num2));
+                break;
+            case '-' :
+                printf("Digite dois numeros: ");
+                scanf("%f" "%f", &num1, &num2);
+                printf("A subtracao dos dois numeros eh: > > %.2f < < ", (num1 - num2));
+                break;
+            case '*' :
+                printf("Digite dois numeros: ");
+                scanf("%f" "%f", &num1, &num2);
+                printf("A multiplicacao dos dois numeros eh: > > %.2f < <", (num1 * num2));
+                break; 
+            case '/' :
+                printf("Digite dois numeros: ");
+                scanf("%f" "%f", &num1, &num2);
+                printf("A divisao dos dois numeros eh: > > %.2f < <", (num1 / num2));
+                break;     
+        }
+    printf("\n\nFim do programa!\n\n");
     system("pause");
     return 0;
 } 
@@ -483,16 +610,31 @@ int main (){
 
 
 // ==================== Exercicio 19 =====================
-// 
+// Faça um programa para verificar se um determinado número inteiro e divisível por 3 ou 5, mas, não simultaneamente pelos dois.
 /*
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
 int main (){
+    int num, n3, n5;
 
+    printf("\nDigite um numero: ");
+    scanf("%d", &num);
 
-    printf("Fim do programa!\n\n");
+    if ( (num%3) == 0) {
+        printf("\nO numero > > eh < < divisivel por 3.");
+    } else{
+        printf("\no numero > nao eh < divisivel por 3");
+    }
+
+    if ( (num%5) == 0) {
+        printf("\nO numero > > eh < < divisivel por 5.");
+    } else{
+        printf("\no numero > nao eh < divisivel por 5.");
+    }
+
+    printf("\n\nFim do programa!\n\n");
     system("pause");
     return 0;
 } 
@@ -501,18 +643,46 @@ int main (){
 
 
 // ==================== Exercicio 20 =====================
-// 
-/*
+/* Dados três valores, A, B, C, verificar se eles podem ser valores dos lados de um triangulo e,
+se forem, se é um triângulo escaleno, equilátero ou isósceles, considerando os seguintes
+conceitos:
+    - O comprimento de cada lado de um triângulo é menor do que a soma dos outros dois
+lados;
+    - Chama-se equilátero o triângulo que tem três lados iguais;
+    - Denominam-se isósceles o triângulo que tem o comprimento de dois lados iguais;
+    - Recebe o nome de escaleno o triângulo que tem os três lados diferentes;
+*/
+//*
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
 int main (){
 
+    /* Triangulo existente, l1 + l2 <= l3, 
+    triangulo equilatero l1==l2==l3
+    triangulo isoscles l1 == l2, l2==l3, l1==l3
+    triangulo escaleno l1 != l2 != l3
+    */
+
+   float l1, l2, l3;
+
+   printf("Digite o valor de cada lado de um triangulo: ");
+   scanf("f" "f" "f", &l1, &l2, &l3);
+
+   if (l1 + l2 <= l3 && l1 + l3 <= l2 && l2 + l3 <= l1) {
+    
+    if ( l1 == l2 == l3) {
+        printf ("Dada as informacoes, eh um triangulo equilatero.");
+
+    }
+
+   }
+
 
     printf("Fim do programa!\n\n");
     system("pause");
     return 0;
 } 
-*/
+//*/
 // ======================================================
