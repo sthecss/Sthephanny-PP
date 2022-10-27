@@ -286,20 +286,20 @@ ideal, utilizando as seguintes fórmulas (onde h corresponde à altura):
 int main (){
     char genero;
     float H, M, halt, peso_IDM;
-        printf("Se for homem digite H, se for mulher digite M: ");
-        scanf("%c", &genero);
 
-    switch( genero )
+            printf("Digite sua altura em metros: ");
+            scanf("%f", &halt);
+                
+        printf("Se for homem digite H, se for mulher digite M: ");
+        scanf(" %c", &genero);
+
+    switch ( genero )
         {
             case 'H':
-                printf("Digite sua altura em metros: ");
-                scanf("%f", &halt);
                 printf("Seu peso ideal eh: %.2f\n", (72.7 * halt) - 58);
                 break;
 
             case 'M':
-                printf("Digite sua altura em centimetros: ");
-                scanf("%f", &halt);
                 printf("Seu peso ideal eh: %.2f\n", (62.1 * halt) - 44.7);
                 break;
         }
@@ -307,7 +307,6 @@ int main (){
     system("pause");
     return 0;
 } 
-
 */
 // ======================================================
 
@@ -324,7 +323,7 @@ int main (){
     int num,soma;
     soma=0;
 
-    printf("Digite um numero inteiro e positivo qualquer: ");
+    printf("\nDigite um numero inteiro e positivo qualquer: ");
     scanf("%d",&num);
 
    if(num>0){
@@ -463,25 +462,25 @@ int main (){
 
   switch( num )
         {
-    case '1':
+    case 1:
     printf("O dia da semana eh: Domingo.");
     break;
-        case '2':
+        case 2:
         printf("O dia da semana eh: Segunda-Feira.");
         break;
-            case '3':
+            case 3:
             printf("O dia da semana eh: Terca-Feira.");
             break;
-                case '4':
+                case 4:
                 printf("O dia da semana eh: Quarta-Feira..");
                   break;
-                      case '5':
+                      case 5:
                       printf("O dia da semana eh: Quinta-Feira.");
                         break;
-                            case '6':
+                            case 6:
                             printf("O dia da semana eh: Sexta-Feira.");
                             break;
-                                case '7':
+                                case 7:
                                   printf("O dia da semana eh: Sabado.");
                                   break;
         }
@@ -623,21 +622,21 @@ int main (){
     scanf("%d", &num);
 
     if ( (num%3) == 0) {
-        printf("\nO numero > > eh < < divisivel por 3.");
-    } else{
-        printf("\no numero > nao eh < divisivel por 3");
-    }
+            printf("\nO numero > > eh < < divisivel por 3.");
 
-    if ( (num%5) == 0) {
-        printf("\nO numero > > eh < < divisivel por 5.");
-    } else{
-        printf("\no numero > nao eh < divisivel por 5.");
-    }
+    }else{
+            if ( (num%5) != 0 && (num%3) != 0) {         
+            printf ("\nO numero nao eh divisivel por nenhum ");
 
+                } else printf("\no numero > > eh < < divisivel por 5.");
+        }
+
+
+    
     printf("\n\nFim do programa!\n\n");
     system("pause");
     return 0;
-} 
+}
 */
 // ======================================================
 
@@ -652,37 +651,84 @@ lados;
     - Denominam-se isósceles o triângulo que tem o comprimento de dois lados iguais;
     - Recebe o nome de escaleno o triângulo que tem os três lados diferentes;
 */
-//*
+
+/*
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+int main (){
+
+   float lado1, lado2, lado3, T;
+
+   printf("Digite o valor de cada lado de um triangulo: ");
+   scanf("%f" "%f" "%f", &lado1, &lado2, &lado3);
+    
+    if ( (lado1 + lado2 >= lado3 ) || (lado2 + lado3 >= lado1) || (lado1 + lado3 >= lado2)) {
+    if ( ( (lado1 != lado2) && (lado1 != lado3 ) && (lado2 != lado3) ) )
+        printf("\nEh um triangulo escaleno ");
+    if ( ( (lado1 == lado2) && (lado1 == lado3 ) && (lado2 == lado3) ) )
+        printf("\nEh um triangulo equilatero");
+    else printf ("\nEh um triangulo isoscles");
+}
+    
+    printf("\n\nFim do programa!\n\n");
+    system("pause");
+    return 0;
+}
+*/
+// ======================================================
+
+
+//==================== Exercicio 21 =====================
+/* Escreva o menu de opções abaixo. Leia a opção do usuário e execute a operação escolhida.
+Escreva uma mensagem de erro se a opção for inválida.
+Escolha a opção:
+1- Soma de 2 números.
+2- Diferença entre 2 números (maior pelo menor).
+3- Produto entre 2 números.
+4- Divisão entre 2 números (o denominador não pode ser zero).
+*/
+///*
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
 int main (){
+char opcao;
+    float num1, num2;
+        printf("\n1- Soma de 2 números.\n2- Diferença entre 2 números (maior pelo menor).\n3- Produto entre 2 números.\n4- Divisão entre 2 números (o denominador não pode ser zero).\n\nEscolha a opção: -");
+        scanf("%c", &opcao);
 
-    /* Triangulo existente, l1 + l2 <= l3, 
-    triangulo equilatero l1==l2==l3
-    triangulo isoscles l1 == l2, l2==l3, l1==l3
-    triangulo escaleno l1 != l2 != l3
-    */
-
-   float l1, l2, l3;
-
-   printf("Digite o valor de cada lado de um triangulo: ");
-   scanf("f" "f" "f", &l1, &l2, &l3);
-
-   if (l1 + l2 <= l3 && l1 + l3 <= l2 && l2 + l3 <= l1) {
-    
-    if ( l1 == l2 == l3) {
-        printf ("Dada as informacoes, eh um triangulo equilatero.");
-
-    }
-
-   }
-
-
-    printf("Fim do programa!\n\n");
+    switch( opcao )
+        {
+            case '1' :
+                printf("Digite dois numeros: ");
+                scanf("%f" "%f", &num1, &num2);
+                printf("A soma de dois numeros eh: > > %.2f < < ", (num1 + num2));
+                break;
+            case '2' :
+                printf("Digite dois numeros: ");
+                scanf("%f" "%f", &num1, &num2);
+                if (num1 > num2) {
+                    printf("E a diferenca entre ambos eh: %.f\n", (num1-num2));
+                        } else {
+                            printf("E a diferenca entre ambos eh: %.f\n", (num2-num1));
+                        }
+                break;
+            case '3' :
+                printf("Digite dois numeros: ");
+                scanf("%f" "%f", &num1, &num2);
+                printf("A multiplicacao dos dois numeros eh: > > %.2f < <", (num1 * num2));
+                break; 
+            case '4' :
+                printf("Digite dois numeros: ");
+                scanf("%f" "%f", &num1, &num2);
+                printf("A divisao dos dois numeros eh: > > %.2f < <", (num1 / num2));
+                break;     
+        }
+    printf("\n\nFim do programa!\n\n");
     system("pause");
     return 0;
-} 
+}
 //*/
 // ======================================================
