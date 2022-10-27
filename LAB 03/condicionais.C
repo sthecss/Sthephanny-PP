@@ -794,3 +794,73 @@ int main (){
 // ======================================================
 
 
+// ==================== Exercicio 24 =====================
+/* Uma empresa vende o mesmo produto para quatro diferentes estados. Cada estado possui
+uma taxa diferente de imposto sobre o produto (MG 7%; SP 12%; RJ 15%; MS 8%). Faça um
+programa em que o usuário entre com o valor e o estado destino do produto e o programa
+retorne o preço final do produto acrescido do imposto do estado em que ele será vendido. Se o
+estado digitado não for válido, mostrar uma mensagem de erro. */
+/*
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+int main () {
+
+    float valorproduto;
+    char estado;
+    printf("Digite o valor o produto: ");
+    scanf("%f", &valorproduto);
+    printf("Dado os seguintes estados:\n1- MG.\n2- SP.\n3- RJ.\n4- MS.\nDigite o numero do estado que o produto se destina:");
+    scanf(" %c", &estado);
+
+    switch ( estado ) {
+        case '1':
+            printf("O preco final do produto foi de: %.2f", (valorproduto*0.07)+valorproduto);    break;
+
+        case '2':
+            printf("O preco final do produto foi de: %.2f", (valorproduto*0.12)+valorproduto);    break;
+
+        case '3':
+            printf("O preco final do produto foi de: %.2f", (valorproduto*0.15)+valorproduto);    break;
+
+        case '4':
+            printf("O preco final do produto foi de: %.2f", (valorproduto*0.08)+valorproduto);    break;
+        }
+
+    printf("\n\nFim do programa!\n\n");
+    system("pause");
+    return 0;
+} */
+// ======================================================
+
+
+
+// ==================== Exercicio 24 =====================
+/* 25. Calcule as raízes da equação de 2º grau.
+    Lembrando que:
+    E ax2 + bx + c = 0 representa uma equação do 2º grau.
+    A variável a tem que ser diferente de zero. Caso seja igual, imprima a mensagem “Não é equação de segundo grau”.
+     Se Delta < 0, não existe real. Imprima a mensagem “Não existe raiz”.
+     Se Delta = 0, existe uma raiz real. Imprima a raiz e a mensagem “Raiz única”.
+     Se Delta >= 0, imprima as duas raízes reais.          */
+//*
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+int main () {
+
+    float valorproduto;
+    char estado;
+    printf("Digite o valor o produto: ");
+    scanf("%f", &valorproduto);
+    printf("Dado os seguintes estados:\n1- MG.\n2- SP.\n3- RJ.\n4- MS.\nDigite o numero do estado que o produto se destina:");
+    scanf(" %c", &estado);
+
+    
+        }
+
+    printf("\n\nFim do programa!\n\n");
+    system("pause");
+    return 0;
+} //*/
+// ======================================================
