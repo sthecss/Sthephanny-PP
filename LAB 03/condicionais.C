@@ -735,3 +735,62 @@ char opcao;
 }
 */
 // ======================================================
+
+
+// ==================== Exercicio 22 =====================
+/*  Leia a idade e o tempo de serviço de um trabalhador e escreva se ele pode ou não se
+aposentar. As condições para aposentadoria são
+ Ter pelo menos 65 anos;
+ Ou ter trabalhado pelo menos 30 anos;
+ Ou ter pelo menos 60 anos e trabalhado pelo menos 25 anos. */
+
+/*
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+int main (){
+
+   int idade, tempo;
+   printf("Digite sua idade e tempo trabalhado: ");
+   scanf("%d" "%d", &idade, &tempo);
+
+    if ((idade >= 65) || ( tempo >= 30) || ( (idade>=60) && (tempo>=25) ) )
+    {
+            printf("Voce PODE se aposentar!");
+    }else{
+    printf("Voce NAO PODE se aposentar!");
+    }
+
+    printf("\n\nFim do programa!\n\n");
+    system("pause");
+    return 0;
+} */
+// ======================================================
+
+
+// ==================== Exercicio 23 =====================
+/* Determine se um determinado ano lido é bissexto. Sendo que um ano é bissexto se for divisível por 400 ou se for divisível por 4 e não for divisível por 100. Por exemplo: 1988, 1992,
+1996. */
+/*
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+int main (){
+
+    int ano;
+    printf("Digite um ano para saber se eh bissexto ou nao: ");
+    scanf("%d", &ano);
+
+    if ( ((ano%400)==0) || ((ano%4)==0) && ((ano%100)!=0) ) {
+        printf("EH um ano bissxto");
+        }else{
+            printf("NAO eh um ano bissexto.");
+        }
+
+    printf("\n\nFim do programa!\n\n");
+    system("pause");
+    return 0;
+} */
+// ======================================================
+
+
