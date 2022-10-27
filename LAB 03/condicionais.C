@@ -688,7 +688,7 @@ Escolha a opção:
 3- Produto entre 2 números.
 4- Divisão entre 2 números (o denominador não pode ser zero).
 */
-///*
+/*
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
@@ -696,15 +696,15 @@ Escolha a opção:
 int main (){
 char opcao;
     float num1, num2;
-        printf("\n1- Soma de 2 números.\n2- Diferença entre 2 números (maior pelo menor).\n3- Produto entre 2 números.\n4- Divisão entre 2 números (o denominador não pode ser zero).\n\nEscolha a opção: -");
-        scanf("%c", &opcao);
+      printf("\n1- Soma de 2 numeros.\n2- Diferenca entre 2 numeros (maior pelo menor).\n3- Produto entre 2 numeros.\n4- Divisao entre 2 numeros.\n\nEscolha a opcao: ");
+    scanf("%c", &opcao);
 
     switch( opcao )
         {
             case '1' :
                 printf("Digite dois numeros: ");
                 scanf("%f" "%f", &num1, &num2);
-                printf("A soma de dois numeros eh: > > %.2f < < ", (num1 + num2));
+                printf("A soma de dois numeros eh: > > %.f < < ", (num1 + num2));
                 break;
             case '2' :
                 printf("Digite dois numeros: ");
@@ -712,23 +712,26 @@ char opcao;
                 if (num1 > num2) {
                     printf("E a diferenca entre ambos eh: %.f\n", (num1-num2));
                         } else {
-                            printf("E a diferenca entre ambos eh: %.f\n", (num2-num1));
-                        }
-                break;
+                            printf("E a diferenca entre ambos eh: > > %.f < <\n", (num2-num1));
+                        }                                                           break;
             case '3' :
                 printf("Digite dois numeros: ");
                 scanf("%f" "%f", &num1, &num2);
-                printf("A multiplicacao dos dois numeros eh: > > %.2f < <", (num1 * num2));
-                break; 
+                printf("O produto dos dois numeros eh: > > %.2f < <", (num1 * num2));
+                break;
             case '4' :
                 printf("Digite dois numeros: ");
                 scanf("%f" "%f", &num1, &num2);
+                if (num2 !=0){
                 printf("A divisao dos dois numeros eh: > > %.2f < <", (num1 / num2));
-                break;     
+                }else{
+            printf("Denominador nao pode ser 0.");
+                    }
+                break;
         }
     printf("\n\nFim do programa!\n\n");
     system("pause");
     return 0;
 }
-//*/
+*/
 // ======================================================
