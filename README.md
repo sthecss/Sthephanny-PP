@@ -43,7 +43,7 @@ Maticula: 12211BCC044</h3>
 
 <div>
 <img src= "https://img.shields.io/badge/Lab03-211022-informational"/>
-<img src= "https://img.shields.io/badge/Lab02-031122-sucess"/>
+<img src= "https://img.shields.io/badge/Lab03-031122-sucess"/>
   <p> Trabalho com 40 questoes diversas para nos familiarizarmos com o uso de condicionais em C. </p>
   <p> Link: https://github.com/sthecss/Sthephanny-PP/blob/main/LAB%2003/condicionais.C </p>
 </div>
@@ -51,8 +51,8 @@ Maticula: 12211BCC044</h3>
 》═══════════════════════~◈~═══════════════════════《
 
 <div>
-<img src= "https://img.shields.io/badge/Lab03-261022-informational"/>
-<img src= "https://img.shields.io/badge/Lab02-Construcao-sucess"/>
+<img src= "https://img.shields.io/badge/Lab04-261022-informational"/>
+<img src= "https://img.shields.io/badge/Lab04-Construcao-sucess"/>
   <p> Trabalho com 23 questoes diversas para nos familiarizarmos com o uso de laços em C. </p>
   <p> Link: https://github.com/sthecss/Sthephanny-PP/blob/main/LAB%2004/lacos.c </p>
 </div>
