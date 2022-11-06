@@ -57,7 +57,9 @@ Maticula: 12211BCC044</h3>
   <p> Link: https://github.com/sthecss/Sthephanny-PP/blob/main/LAB%2004/lacos.c </p>
 </div>
 
+》═══════════════════════~◈~═══════════════════════《
 
 <a href="https://imgur.com/05qSkrd"><img src="https://i.imgur.com/05qSkrd.gif" title="source: imgur.com" width=570 /></a>
+
 》═══════════════════════~◈~═══════════════════════《
 
