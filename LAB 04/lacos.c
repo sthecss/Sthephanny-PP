@@ -23,7 +23,7 @@ int main ()
         {
             if ((num%3)==0)
             {
-                printf("%d eh o %do multiplo de 3.\n", num, lugar);
+                printf("[ %d ] eh o [ %do ] multiplo de 3.\n", num, lugar);
                 lugar++;
             }
             num++;
@@ -31,7 +31,7 @@ int main ()
     } while (contagem != 15);
     
     printf("\nFim do programa!\n\n");           return 0;
-}         */
+}                                                      */
 // ======================================================
 
 
@@ -52,7 +52,7 @@ int main ()
     // ============= Primeiro Caso: For  =================
     for (i = 0; i < contagem; num++)
     {
-        printf("%d\n",num);
+        printf("[ %d ]\n",num);
         i++;
         if (i==100)
         {
@@ -64,7 +64,7 @@ int main ()
     num=1;
     while (i<contagem)
     {
-        printf("%d\n",num);
+        printf("{ %d }\n",num);
         num++;
         i++;
         if (i==100)
@@ -78,7 +78,7 @@ int main ()
     contagem=0;
     do
     {
-        printf("%d\n",num);
+        printf("(( %d ))\n",num);
         num++;
         i++;
 
@@ -107,9 +107,11 @@ int main ()
 
     int i, num=10, contagem=-1;
 
+    printf("\n- - Contagem Regressiva - - \n\n");
+
     for (i = 10; i > contagem; num--)
     {
-        printf("%d\n",num);
+        printf("[ %d ]\n",num);
         i--;
         if (i==-1)
         {
@@ -118,7 +120,7 @@ int main ()
     }
 
     printf("\nF I M !\n\n");         return 0;
-}       */
+}                                                    */
 // ======================================================
 
 
@@ -135,7 +137,7 @@ int main ()
 
     for (i=100100; i > contagem; )
     { 
-        printf("%d\n", num);
+        printf("[ %d ]\n", num);
         contagem = contagem+1000;
         num = num+1000;
 
@@ -162,14 +164,14 @@ int main (){
 
     for (i = 10 ; i > contagem; num++)
     {
-        printf("\nDigite o %do numero: ",num);
+        printf("\nDigite o ( %do ) numero: ",num);
         scanf("%d", &ns);
         contagem++;
         soma = soma + ns;
 
         if (num >= 10)
         {
-            printf("\n- A soma dos 10 numeros eh de: %d.", soma);
+            printf("\n- - A soma dos 10 numeros eh de: { %d } - -", soma);
             break;
         }
     }
@@ -191,14 +193,14 @@ int main (){
 
     for (i = 10 ; i > contagem; num++)
     {
-        printf("\nDigite o %do numero: ",num);
+        printf("\nDigite o ( %do ) numero: ",num);
         scanf("%d", &ns);
         contagem++;
         soma = soma + ns;
 
         if (num >= 10)
         {
-            printf("\n- A media dos 10 numeros eh de: %d.", soma/10);
+            printf("\n- - A media dos 10 numeros eh de: [ %d ] - -", soma/10);
             break;
         }
     }
@@ -214,13 +216,14 @@ int main (){
 #include <stdio.h>
 #include <stdlib.h>
 
-int main (){
+int main ()
+{
 
     int i, num=1, contagem=0, ns, soma=0;
 
     for (i = 10 ; i > contagem; num++)
     {
-        printf("\nDigite o %do numero: ",num);
+        printf("\nDigite o ( %do ) numero: ",num);
         scanf("%d", &ns);
 
         if (ns>0)
@@ -232,7 +235,7 @@ int main (){
 
         if (num >= 10)
         {
-            printf("\n- A media dos 10 numeros, desconsiderando os negativos, eh de: %d.", soma/10);
+            printf("\n- - A media dos 10 numeros, desconsiderando os negativos, eh de: { %d } - -", soma/10);
             break;
         }
     }
@@ -281,127 +284,254 @@ int main()
 
 // ==================== Exercicio 09 ====================
 // Faça um programa que leia um número inteiro N e depois imprima os N primeiros números naturais ímpares.
-//*
+/*
 #include <stdio.h>
 #include <stdlib.h>
-#include <math.h>
 
-int main (){
+int main ()
+{
 
-    int i=0, num=0, contador=0, nq, resto=0, lugar=1;
+    // Lógica empregada: O número qualquer lido (int nq) determinará a meta (int meta) de quantos numeros impares deverão ser achados. 
+
+    int num=0, contador=0, nq, resto=0, lugar=1, meta=0;
 
     printf("Digite um numero inteiro qualquer: ");
     scanf("%d", &nq);
 
-    for (i=nq; contador<nq; contador++)
+    meta=nq;
+
+    do 
     {
+
         if (nq%2 != 0)
         {
-            printf("\n- O %do numero natural impar eh: %d.", lugar, nq);
+            printf("\n- O %do numero natural impar do numero lido eh: %d.", lugar, nq);
             lugar++;
-            nq++;
         }
-    }
+        
+        contador++;
+        nq++;
+
+    } while(lugar<=meta);
 
 
     printf("\n\nFim do programa!\n\n");          return 0;
-}                                                   //*/
+}                                                   */
 // ======================================================
 
 
 // ==================== Exercicio 10 =====================
-// 
+// Faça um programa que calcule e mostre a soma dos 50 primeiros números pares.
 /*
 #include <stdio.h>
 #include <stdlib.h>
-#include <math.h>
 
-int main (){
+int main ()
+{
+    int num=0, contagem=0, meta=50, S50=0;
 
+    do 
+    {
+        
+        if (num%2 == 0)
+        {
+            S50= S50 + num;
+            contagem++;
+        }
 
+        num++;
 
-    printf("\n\nFim do programa!\n\n");      system("pause");        return 0;
-}       */
+    } while (contagem<=meta);
+
+    
+    printf("\n- - A soma dos 50 primeiros pares eh igual a: [ %d ] - -", S50);
+
+    printf("\n\nFim do programa!\n\n");         return 0;
+}                                                       */
 // ======================================================
 
 
 // ==================== Exercicio 11 =====================
-// 
+// Faça um programa que leia um número inteiro positivo N e imprima todos os números naturais de 0 até N em ordem crescente.
 /*
 #include <stdio.h>
 #include <stdlib.h>
-#include <math.h>
 
-int main (){
+int main ()
+{
+    int numq, num=1, contagem=0, start=0;
 
+    printf ("Digite um numero qualquer: ");
+    scanf("%d", &numq);
 
+    do
+    {
+        printf("\n%d", start);
+        start = num;
+        num++;
+        contagem++;
 
-    printf("\n\nFim do programa!\n\n");      system("pause");        return 0;
-}       */
+    } while (contagem<=numq);
+
+    printf("\n\nFim do programa!\n\n");         return 0;
+}                                                      */
 // ======================================================
 
 
 // ==================== Exercicio 12 =====================
-// 
+// Escreva um programa que leia um número inteiro e calcule a soma de todos os divisores desse número, com exceção dele próprio.
+// Ex: a soma dos divisores do número 66 é 1 + 2 + 3 + 6 + 11 + 22 + 33 = 78
 /*
 #include <stdio.h>
 #include <stdlib.h>
-#include <math.h>
 
-int main (){
+int main ()
+{
 
+    int num=1, contador=1, numq, soma=0, meta, teste;
 
+    printf("\n- Digite um numero qualquer: ");
+    scanf("%d", &numq);
 
-    printf("\n\nFim do programa!\n\n");      system("pause");        return 0;
-}      */
+    meta = numq;
+
+    do
+    {
+        teste = numq % num;
+
+        if (teste == 0)
+        {
+            soma = soma + num;
+        }
+
+        contador++;
+        num++;
+
+    } while (contador<meta);
+    
+    printf("- A soma dos divisores de %d eh igual a: [ %d ]", numq, soma);
+
+    printf("\n\nFim do programa!\n\n");         return 0;
+}                                                   */
 // ======================================================
 
 
 // ==================== Exercicio 13 =====================
-// 
+// Faça um programa que some todos os números naturais abaixo de 1000 que são múltiplos de 3 ou 5.
 /*
 #include <stdio.h>
 #include <stdlib.h>
-#include <math.h>
 
-int main (){
+int main ()
+{
 
+    int num= 1, teste3, teste5, meta=1000, soma=0;
 
+    do
+    {
+        teste3 = num % 3;
+        teste5 = num % 5;
 
-    printf("\n\nFim do programa!\n\n");      system("pause");        return 0;
-}       */
+        if (teste3==0)
+        {
+            soma = soma + num;
+        }
+        
+        else if (teste5==0)
+        {
+            soma = soma + num;
+        }
+        
+        num++;
+
+    } while (num< meta);
+
+    printf("\n- A soma de todos os numeros abaixo de 1000, multiplos de 3 ou 5 eh de: [ %d ].", soma);
+    
+    printf("\n\nFim do programa!\n\n");          return 0;
+}                                                      */
 // ======================================================
 
 
 // ==================== Exercicio 14 =====================
-// 
+// Faça um programa que simula o lançamento de dois dados, d1 e d2, n vezes, e tem como saída o número de cada dado e a relação entre eles (>, <, =) de cada lançamento.
 /*
 #include <stdio.h>
 #include <stdlib.h>
-#include <math.h>
 
-int main (){
+int main ()
+{
+    int d1, d2, vezes, i;
+  
+    printf("\n- Vamos girar os dados...\n");
+
+    // Para aleatorizar as vezes. Um pseudo-aletatório, limitado a 100 para facilitar.
+    srand(time(NULL));
+    vezes= rand() % 100;
 
 
+    printf("\n- - Sera rodado %d vezes os dados! - - \n", vezes);
 
-    printf("\n\nFim do programa!\n\n");      system("pause");        return 0;
-}       */
+
+    for (i = 0; i < vezes; i++)
+    {
+        d1 =  1 + ( rand() % 6 );
+        d2 =  1 + ( rand() % 6 );
+
+        printf("\n- Dado 1: %d\n", d1);
+        printf("- Dado 2: %d\n", d2);
+        
+        if (d1 > d2)
+        {
+            printf("[ D1 > D2 ]\n");
+        }
+
+        else if (d1 < d2)
+        {
+            printf("[ D2 > D1 ]\n");
+        } 
+
+        else if (d1 == d2) 
+        {
+            printf("[ D1 = D2 ]\n");
+        }
+    }
+
+    printf("\nFim do programa!\n\n");          return 0;
+}                                                   */
 // ======================================================
 
 
 // ==================== Exercicio 15 ====================
-// 
+// Faça um programa que leia um conjunto não determinado de valores, um de cada vez, e escreva para cada um dos valores lidos, o quadrado, o cubo e a raiz quadrada. Finalize a entrada de dados com um valor negativo ou zero.
 /*
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-int main (){
+int main ()
+{
+    float num, quad, cubo, raiz, key=1;
 
+   while(key>=0)
+   {
+       printf("\nDigite o número: "); scanf("%f", &num);
 
+       quad = num*num;
+       cubo = num*num*num;
+       raiz = sqrt(num);
 
-    printf("\n\nFim do programa!\n\n");      system("pause");        return 0;
-}       */
+       if(num>0)
+       {
+           printf("\nquadrado: %.2f", quad);
+           printf("\ncubo: %.2f", cubo);
+           printf("\nraiz: %.2f\n", raiz);
+       }
+       else cond= -1;
+   }
+
+    printf("\n\nFim do programa!\n\n");         return 0;
+}                                                   */
 // ======================================================
 
 // ==================== Exercicio 16 ====================
@@ -490,40 +620,60 @@ int main ()
 
 
 // ==================== Exercicio 17 ====================
-// 
+// Chico tem 1.50 metro e cresce 2 centímetros por ano, enquanto Zé tem 1.10 metros e cresce 3 centímetros por ano. Escreva um programa que calcule e imprima quantos anos serão necessários para que Zé seja maior que Chico.
 /*
 #include <stdio.h>
 #include <stdlib.h>
-#include <math.h>
 
 int main (){
 
+    float chico = 1.5, ze = 1.1;
+    int ano = 0;
 
+    while(chico >= ze)
+    {
+        chico += 0.02;
+        ze += 0.03;
+        ano++;
+        printf("Chico: %.2f\tZe: %.2f\tPassado %d ano(s)\n", chico, ze, ano);
+    }
+    printf("\n[ Sao necessarios %d anos! ]", ano);
 
-    printf("\n\nFim do programa!\n\n");      system("pause");        return 0;
-}       */
+    printf("\n\nFim do programa!\n\n");         return 0;
+}                                                       */
 // ======================================================
 
 
 // ==================== Exercicio 18 ====================
-// 
+// Um funcionário recebe aumento anual. Em 1995 foi contratado por 2000 reais. Em 1996 recebeu aumento de 1.5%. A partir de 1997, os aumentos sempre correspondem ao dobro do ano anterior. Faça programa que determine o salário atual do funcionário.
 /*
-#include <stdio.h>
-#include <stdlib.h>
-#include <math.h>
+int main()
+{
+    int ano;
+    double salario = 2000, aumento_salario;
 
-int main (){
+    aumento_salario = salario * 0.015;
 
+    printf("\n- Ano [1995]\t Salario [R$%.3lf]\n", salario);
+    
+    for (ano = 1996; ano <= 2022; ano++) {
+        salario += aumento_salario;
+        aumento_salario *= 2;      
 
+        printf("Ano [%d]\t Salario [R$%.3lf]\n", ano, salario);
+    }
 
-    printf("\n\nFim do programa!\n\n");      system("pause");        return 0;
-}       */
+    printf("\nSalario em 2022 eh R$%.3lf\n\n", salario);
+
+    return 0;
+
+}  */
 // ======================================================
 
 
 // ==================== Exercicio 19 ====================
-// 
-/*
+// Escreva um programa que receba como entrada o valor do saque realizado pelo cliente de um banco e retorne quantas notas de cada valor serão necessárias para atender ao saque com a menor quantidade de notas possível. Serão utilizadas notas de 100, 50, 20, 10, 5, 2 e 1 real.
+//*
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
@@ -533,7 +683,7 @@ int main (){
 
 
     printf("\n\nFim do programa!\n\n");      system("pause");        return 0;
-}       */
+}       //*/
 // ======================================================
 
 
