@@ -673,108 +673,219 @@ int main()
 
 // ==================== Exercicio 19 ====================
 // Escreva um programa que receba como entrada o valor do saque realizado pelo cliente de um banco e retorne quantas notas de cada valor serão necessárias para atender ao saque com a menor quantidade de notas possível. Serão utilizadas notas de 100, 50, 20, 10, 5, 2 e 1 real.
-//*
+/*
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-int main (){
+int main ()
+{
+    int saque, nt = 100, cont;
 
+    printf("Digite o valor do saque: ");
+    scanf("%d", &saque);
 
+    for (cont = 1; cont <= 7; cont++)
+    {
+        printf("\nSera entregue %d notas de %d\n", saque / nt, nt);
+        saque = saque % nt;
 
-    printf("\n\nFim do programa!\n\n");      system("pause");        return 0;
-}       //*/
+        switch(cont)
+        {
+            case 1: nt = 50;
+            break;
+
+            case 2: nt = 20;
+            break;
+
+            case 3: nt = 10;
+            break;
+
+            case 4: nt = 5;
+            break;
+
+            case 5: nt = 2;
+            break;
+
+            case 6: nt = 1;
+            break;
+        }
+    }
+
+    printf("\n\nFim do programa!\n\n");         return 0;
+}                                                      */
 // ======================================================
 
 
 // ==================== Exercicio 20 =====================
-//
+/* Faça um programa que calcule a soma de todos os números primos abaixo de dois milhões.   */
 /*
-int main()
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main ()
 {
+    int num = 2, restd = 0, cont = 0, divisao = 0, nscan = 0, soma = 0;
     
-    int num = 2, resultado = 0, contador = 0, divisao = 0, alcance;
+    printf("Digite um numero que seja diferente de 0 e 1 para saber se ele e primo, em seguida sera apresentada a soma de todos os primos até ele: ");
+    scanf("%d", &nscan);
     
-    printf("Digite um número para saber se é primo: \n");
-    scanf("%d", &alcance);
-    
-
-    printf("O numero 0 NAO e primo!\n");    
-    printf("O numero 1 NAO e primo!\n");
-
     inicio:
-    if (num <= alcance)
+    if (num <= nscan)
     {
-        for (contador = 2; contador < num; contador++)
+        for (cont = 2; cont < num; cont++)
         {
-            resultado = 0;
-            divisao = num % contador;
+            restd = 0;                     divisao = num % cont;
 
             if (divisao == 0)
             {
-                resultado = resultado + 1;
+                restd++;
                 break;
             }
+
         }
         
-        if (resultado == 1)
-            printf("O numero %d NAO e primo!\n", num);
+        if (restd == 1)
+        {
+            printf("");
+        }
             
-        if (resultado == 0)
-            printf("O numero %d > > EH < < primo!\n", num);
+        if (restd == 0)
+        {
+            printf("O numero [ %d ] eh um primo!\n", num);
+            soma = soma + num;
+        }
+           
         num++;
         goto inicio;
     }
-    
-        
-    return 0;
-}       */
+
+    printf("[ A soma dos primos eh: %d ] ", soma);
+
+    printf("\n\nFim do programa!\n\n");         return 0;
+}                                                    */
 // ======================================================
 
 
 // ==================== Exercicio 21 =====================
-// 
+//  Faça um programa que conte quantos números primos existentes entre a e b, onde a e b são números informados pelo usuário.
 /*
 #include <stdio.h>
 #include <stdlib.h>
-#include <math.h>
 
-int main (){
+int main()
+{
+    int num = 0, result= 0, cont = 0, divisao = 0, meta = 0, soma = 0, amnt = 0;
+        
+        printf("Digite um intervalo para saber quantos primos existem: \n");
+        scanf("%d %d", &amnt, &meta);
+        
+        Comeco:
+        if (amnt <= meta)
+        {
+            for (cont = 2; cont <  amnt; cont++)
+            {
+                result = 0;
+                divisao = (num + amnt) % cont;
 
-
-
-    printf("\n\nFim do programa!\n\n");      system("pause");        return 0;
-}       */
+                if (divisao == 0)
+                {
+                    result = result + 1;
+                    break;
+                }
+            }
+            
+            if (result == 1)
+            {
+                printf("");
+            }
+                
+            if (result == 0)
+            {
+                soma = soma + 1;
+            }
+            
+            amnt++;
+            goto Comeco;
+        }
+    
+    printf("A quantidade de numeros primos e: %d", soma);
+        
+}                                                      */
 // ======================================================
 
 
 // ==================== Exercicio 22 =====================
-// 
+// Faça um programa que calcule o maior número palíndromo feito a partir do produto de dois números de 3 dígitos. Ex.: O maior palíndromo feito a partir do produto de dois números de dois dígitos é 9009 = 91*99.
 /*
 #include <stdio.h>
 #include <stdlib.h>
-#include <math.h>
 
-int main (){
+int main ()
+{
+    int N1,N2,rev,ran,final = 0;
 
+    for (N1 = 999; N1 >= 100; N1--)
+    {
+        for (N2 = N1; N2 >= 100; N2--)
+        {
+            ran = N1 * N2;
+            while (ran != 0)
+            {
+                rev = rev * 10 + (N1 * N2) % 10;
+                ran = ran / 10;
+            }
+            if (rev == (N1 * N2))
+            {
+                printf("\nO maior palindromo eh %d x %d = %d", N1, N2, N1 * N2);
+                final++;
+                break;
+            }
+            rev = 0;
+        }
 
+        if  (final == 1)     break;
+    }
 
-    printf("\n\nFim do programa!\n\n");      system("pause");        return 0;
-}      */
+    printf("\n\nFim do programa!\n\n");          return 0;
+}                                                      */
 // ======================================================
 
 
 // ==================== Exercicio 23 =====================
-// 
+/* Escreva um programa que leia um número inteiro positivo n e em seguida imprima n linhas do chamado Triangulo de Floyd. Para n = 6, temos:
+1
+2 3
+4 5 6
+7 8 9 10
+11 12 13 14 15
+16 17 18 19 20 21                                      */
 /*
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-int main (){
+int main ()
+{
+    int linhas, cont, vx;
+    char letra = 65;
 
+    printf("Digite a quantidade de linhas desejada: ");       scanf("%d", &linhas);
 
+    for (vx = 1; vx <= linhas; vx++)
+    {
+        for (cont = 1; cont <= vx; cont++)
+        {
+            printf("%c ", letra);
+            if (letra == 90)
+                letra = 64;
+            letra = letra + 1;     
+        }
+        
+        printf("\n");
+    }
 
     printf("\n\nFim do programa!\n\n");      system("pause");        return 0;
-}       */
+}                                                  */
 // ======================================================
