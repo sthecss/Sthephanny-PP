@@ -3,7 +3,7 @@
   Matricula   : 12211BCC044;
   lAB 04      : LAÇOS;
   Recebido    : 26/10;
-  Entrega     :
+  Entrega     : 17/11
   Uberlandia 2022.
 */
 
