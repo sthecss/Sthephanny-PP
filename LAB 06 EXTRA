@@ -14,45 +14,56 @@
 
 ========================================================================================================
 
-int main ()
-{
-    char cebolinhar[200];
-    int i;
+#include <stdio.h>
 
-    printf("\n- Digite uma frase para Cebilinhar:\n");
-    fgets(cebolinhar, 200, stdin);
+int main(){
+    char cebolinhar[500] = " ";
+    int i = 0;
 
+    printf("Digite uma frase de Cebolinha:\n");
+    fgets(cebolinhar, 500, stdin);
 
-        for (i = 0; i < 200; i++)
+    for (i = 0; i < 500; i++)
     {
-        // Dis r no meio
-        if ((cebolinhar [i] == 'r') && (cebolinhar [i+1] == 'r'))
+        // R e L centrais
+        if ((cebolinhar[i] == 'r' || (cebolinhar[i] == 'R')) && (cebolinhar[i + 1] == 'r'))
         {
-            cebolinhar [i] = 127;
-            cebolinhar [i+1] = 'l';
+            if ("R")
+            printf("L");
+
+            else
+            printf("l");
+            
+            i++;
         }
 
-        // R no final:
-        else if ((cebolinhar [i] == 'r' && (cebolinhar [i+1] == ' ')) || (cebolinhar [i] == 'r'))
+
+        // Mudar RR paara L
+        else if ((cebolinhar[i] == 'r' || (cebolinhar[i] == 'R')) && (cebolinhar[i + 1] == ' ' || cebolinhar [i + 1] <= '\0'))
         {
-            cebolinhar [i] = 'r';
+            if ('R')
+            printf("R");
+
+            else
+            printf("r");
         }
 
-        // R maiusculo
-        else if ( (cebolinhar [i] == 'R') )
+
+        // R final
+        else if (cebolinhar[i] == 'r' || (cebolinhar[i] == 'R'))
         {
-            cebolinhar [i] = 'L';
+            if ("R")
+            printf("L");
+
+            else
+            printf("l");
         }
 
-        // R geral
-        else if ((cebolinhar [i] == 'r'))
-        {
-            cebolinhar [i] = 'l';
+        else{
+        printf("%c", cebolinhar[i]);
         }
-
     }
 
-    printf("\n- A frase digitada foi:\n%s", cebolinhar);
 
     return 0;
 }
