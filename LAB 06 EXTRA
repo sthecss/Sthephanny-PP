@@ -29,21 +29,16 @@ int main ()
     fgets(cebolinhar, 200, stdin);
 
 
-        for (i = 0; i < 200; i++)
+                for (i = 0; i < 200; i++)
     {
-        // R maiusculo
-        if ( (cebolinhar [i] == 'R') )
-        {
-            cebolinhar [i] = 'L';
-        }
+
 
         // Dis r no meio
-        else if ((cebolinhar [i] == 'r') && (cebolinhar [i+1] == 'r'))
+        if ((cebolinhar [i] == 'r') && (cebolinhar [i+1] == 'r'))
         {
             cebolinhar [i] = 127;
             cebolinhar [i+1] = 'l';
         }
-
 
         // R no final:
         else if (cebolinhar [i] == 'r' && (cebolinhar [i+1] == ' ') || cebolinhar [i] == 'r')
@@ -51,10 +46,21 @@ int main ()
             cebolinhar [i] = 'r';
         }
 
+        // R maiusculo
+        else if ( (cebolinhar [i] == 'R') )
+        {
+            cebolinhar [i] = 'L';
+        }
 
-    }
+        else if ( (cebolinhar [i] == 'r') )
+        {
+            cebolinhar [i] = 'l';
+        }
+        
+     }
 
     printf("\n- A frase digitada foi:\n%s", cebolinhar);
 
     return 0;
 }
+
