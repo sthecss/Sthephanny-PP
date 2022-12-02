@@ -46,7 +46,7 @@ int main ()
 
 
         // R no final:
-        else if (cebolinhar [i] == 'r' && (cebolinhar [i+1] == '32') )
+        else if (cebolinhar [i] == 'r' && (cebolinhar [i+1] == ' ') )
         {
             cebolinhar [i] = 'r';
         }
