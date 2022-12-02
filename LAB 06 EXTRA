@@ -14,12 +14,6 @@
 
 ========================================================================================================
 
-#include <stdio.h>
-#include <stdlib.h>
-
-
-char *fgets(char *str, int tamanho, FILE * p);
-
 int main ()
 {
     char cebolinhar[200];
@@ -29,10 +23,8 @@ int main ()
     fgets(cebolinhar, 200, stdin);
 
 
-                for (i = 0; i < 200; i++)
+        for (i = 0; i < 200; i++)
     {
-
-
         // Dis r no meio
         if ((cebolinhar [i] == 'r') && (cebolinhar [i+1] == 'r'))
         {
@@ -41,7 +33,7 @@ int main ()
         }
 
         // R no final:
-        else if (cebolinhar [i] == 'r' && (cebolinhar [i+1] == ' ') || cebolinhar [i] == 'r')
+        else if ((cebolinhar [i] == 'r' && (cebolinhar [i+1] == ' ')) || (cebolinhar [i] == 'r'))
         {
             cebolinhar [i] = 'r';
         }
@@ -52,15 +44,15 @@ int main ()
             cebolinhar [i] = 'L';
         }
 
-        else if ( (cebolinhar [i] == 'r') )
+        // R geral
+        else if ((cebolinhar [i] == 'r'))
         {
             cebolinhar [i] = 'l';
         }
-        
-     }
+
+    }
 
     printf("\n- A frase digitada foi:\n%s", cebolinhar);
 
     return 0;
 }
-
