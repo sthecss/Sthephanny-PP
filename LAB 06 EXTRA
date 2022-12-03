@@ -1,0 +1,69 @@
+// Cebolinha, o famoso personagem de Mauricio de Sousa, é bem conhecido pela sua forma de falar “elado”. Cebolinha quando fala, troca o R pelo L. Essa condição é denominada dislalia. A dislalia é um distúrbio que acomete a fala, caracterizado pela dificuldade em articular as palavras. A pessoa portadora de dislalia, troca as palavras por outras similares na pronuncia,fala erroneamente as palavras, omitindo ou trocando as letras. Considerando o tipo de dislalia do Cebolinha, faça um programa em C que, dada uma string de entrada, gere uma string de saída com todos ‘r’ e ‘rr’ trocados por ‘l’, exceto para os casos que o ‘r’ está no final das palavras.
+
+========================================================================================================
+// - Exemplos:
+
+// 1. Perguntar se eu quero comida, é tipo perguntar se eu quero dinheiro!
+// Pelguntar se eu quelo comida, é tipo pelguntar se eu quelo dinheilo!
+
+// 2. Dinheiro não traz felicidade, mas, eu nem me importo de viver triste comprando roupas em París!
+// Dinheilo não tlaz felicidade, mas, eu nem me impolto de viver tliste complando loupas em Palis!
+
+// 3. Quem passa boa impressão é impressora, eu só passo vergonha mesmo...
+// Quem passa boa implessão é implessola, eu só passo velgonha mesmo...
+
+========================================================================================================
+
+#include <stdio.h>
+
+int main(){
+    char cebolinhar[500] = " ";
+    int i = 0;
+
+    printf("Digite uma frase de Cebolinha:\n");
+    fgets(cebolinhar, 500, stdin);
+
+    for (i = 0; i < 500; i++)
+    {
+        // R e L centrais
+        if ((cebolinhar[i] == 'r' || (cebolinhar[i] == 'R')) && (cebolinhar[i + 1] == 'r'))
+        {
+            if ("R")
+            printf("L");
+
+            else
+            printf("l");
+            
+            i++;
+        }
+
+
+        // Mudar RR paara L
+        else if ((cebolinhar[i] == 'r' || (cebolinhar[i] == 'R')) && (cebolinhar[i + 1] == ' ' || cebolinhar [i + 1] <= '\0'))
+        {
+            if ('R')
+            printf("R");
+
+            else
+            printf("r");
+        }
+
+
+        // R final
+        else if (cebolinhar[i] == 'r' || (cebolinhar[i] == 'R'))
+        {
+            if ("R")
+            printf("L");
+
+            else
+            printf("l");
+        }
+
+        else{
+        printf("%c", cebolinhar[i]);
+        }
+    }
+
+
+    return 0;
+}
